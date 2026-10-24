@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowFoot OSINT</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>ShadowFoot OSINT</h1>
+    <p>Open-source intelligence dashboard</p>
+
+    <section class="card">
+      <h2>New Scan</h2>
+      <form id="scanForm">
+        <label for="target">Target domain or IP</label>
+        <input id="target" name="target" type="text"
+               placeholder="example.com" required>
+        <button type="submit">Start Scan</button>
+      </form>
+      <p id="status">Demo interface — scanning backend not connected.</p>
+    </section>
+
+    <section class="card">
+      <h2>Scan Results</h2>
+      <p>Results will appear here when a real scanning backend is connected.</p>
+    </section>
+
+    <footer>Use only on systems you own or have permission to assess.</footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
